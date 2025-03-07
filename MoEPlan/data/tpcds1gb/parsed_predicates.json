@@ -1,0 +1,635 @@
+[
+    [
+        "date_dim.d_year,,=,,2000",
+        "Error parsing: (ctr1.ctr_total_return > ((avg(ctr2.ctr_total_return) * 1.2)))",
+        "store.s_state,,=,,'TN'::bpchar"
+    ],
+    [
+        "date_dim_1.d_year,,=,,2002",
+        "date_dim.d_year,,=,,2001"
+    ],
+    [
+        "dt.d_moy,,=,,12",
+        "item.i_manufact_id,,=,,436"
+    ],
+    [
+        "Error parsing: (CASE WHEN (t_c_firstyear.year_total > '0'::numeric) THEN (t_c_secyear.year_total / t_c_firstyear.year_total) ELSE NULL::numeric END > CASE WHEN (t_w_firstyear.year_total > '0'::numeric) THEN (t_w_secyear.year_total / t_w_firstyear.year_total) ELSE NULL::numeric END)",
+        "Error parsing: (CASE WHEN (t_c_firstyear.year_total > '0'::numeric) THEN (t_c_secyear.year_total / t_c_firstyear.year_total) ELSE NULL::numeric END > CASE WHEN (t_s_firstyear.year_total > '0'::numeric) THEN (t_s_secyear.year_total / t_s_firstyear.year_total) ELSE NULL::numeric END)",
+        "t_w_firstyear.year_total,,>,,'0'::numeric,,t_w_firstyear.sale_type,,=,,'w'::text,,t_w_firstyear.dyear,,=,,2001",
+        "t_s_firstyear.year_total,,>,,'0'::numeric,,t_s_firstyear.sale_type,,=,,'s'::text,,t_s_firstyear.dyear,,=,,2001",
+        "t_c_firstyear.year_total,,>,,'0'::numeric,,t_c_firstyear.sale_type,,=,,'c'::text,,t_c_firstyear.dyear,,=,,2001",
+        "t_s_secyear.sale_type,,=,,'s'::text,,t_s_secyear.dyear,,=,,2002",
+        "t_c_secyear.sale_type,,=,,'c'::text,,t_c_secyear.dyear,,=,,2002",
+        "t_w_secyear.sale_type,,=,,'w'::text,,t_w_secyear.dyear,,=,,2002"
+    ],
+    [
+        "date_dim.d_date,,>=,,'1998-08-04'::date,,date_dim.d_date,,<=,,'1998-08-18 00:00:00'::timestamp without time zone",
+        "date_dim_1.d_date,,>=,,'1998-08-04'::date,,date_dim_1.d_date,,<=,,'1998-08-18 00:00:00'::timestamp without time zone",
+        "date_dim_2.d_date,,>=,,'1998-08-04'::date,,date_dim_2.d_date,,<=,,'1998-08-18 00:00:00'::timestamp without time zone"
+    ],
+    [
+        "date_dim.d_year,,=,,2000,,date_dim.d_moy,,=,,2",
+        "Error parsing: (count(*) >= 10)",
+        "i.i_current_price,,>,,jj.avg_price",
+        "d.d_month_seq,,=,,$0"
+    ],
+    [
+        "customer_demographics.cd_gender,,=,,'F'::bpchar,,customer_demographics.cd_marital_status,,=,,'W'::bpchar,,customer_demographics.cd_education_status,,=,,'Primary'::bpchar",
+        "date_dim.d_year,,=,,1998",
+        "promotion.p_channel_email,,=,,'N'::bpchar,,promotion.p_channel_event,,=,,'N'::bpchar"
+    ],
+    [
+        "date_dim.d_qoy,,=,,1,,date_dim.d_year,,=,,2002",
+        "Error parsing: (count(*) > 10)",
+        "customer.c_preferred_cust_flag,,=,,'Y'::bpchar",
+        "Error parsing: (substr((customer_address_1.ca_zip)::text, 1, 5) = ANY ('{89436,30868,65085,22977,83927,77557,58429,40697,80614,10502,32779,91137,61265,98294,17921,18427,21203,59362,87291,84093,21505,17184,10866,67898,25797,28055,18377,80332,74535,21757,29742,90885,29898,17819,40811,25990,47513,89531,91068,10391,18846,99223,82637,41368,83658,86199,81625,26696,89338,88425,32200,81427,19053,77471,36610,99823,43276,41249,48584,83550,82276,18842,78890,14090,38123,40936,34425,19850,43286,80072,79188,54191,11395,50497,84861,90733,21068,57666,37119,25004,57835,70067,62878,95806,19303,18840,19124,29785,16737,16022,49613,89977,68310,60069,98360,48649,39050,41793,25002,27413,39736,47208,16515,94808,57648,15009,80015,42961,63982,21744,71853,81087,67468,34175,64008,20261,11201,51799,48043,45645,61163,48375,36447,57042,21218,41100,89951,22745,35851,83326,61125,78298,80752,49858,52940,96976,63792,11376,53582,18717,90226,50530,94203,99447,27670,96577,57856,56372,16165,23427,54561,28806,44439,22926,30123,61451,92397,56979,92309,70873,13355,21801,46346,37562,56458,28286,47306,99555,69399,26234,47546,49661,88601,35943,39936,25632,24611,44166,56648,30379,59785,11110,14329,93815,52226,71381,13842,25612,63294,14664,21077,82626,18799,60915,81020,56447,76619,11433,13414,42548,92713,70467,30884,47484,16072,38936,13036,88376,45539,35901,19506,65690,73957,71850,49231,14276,20005,18384,76615,11635,38177,55607,41369,95447,58581,58149,91946,33790,76232,75692,95464,22246,51061,56692,53121,77209,15482,10688,14868,45907,73520,72666,25734,17959,24677,66446,94627,53535,15560,41967,69297,11929,59403,33283,52232,57350,43933,40921,36635,10827,71286,19736,80619,25251,95042,15526,36496,55854,49124,81980,35375,49157,63512,28944,14946,36503,54010,18767,23969,43905,66979,33113,21286,58471,59080,13395,79144,70373,67031,38360,26705,50906,52406,26066,73146,15884,31897,30045,61068,45550,92454,13376,14354,19770,22928,97790,50723,46081,30202,14410,20223,88500,67298,13261,14172,81410,93578,83583,46047,94167,82564,21156,15799,86709,37931,74703,83103,23054,70470,72008,49247,91911,69998,20961,70070,63197,54853,88191,91830,49521,19454,81450,89091,62378,25683,61869,51744,36580,85778,36871,48121,28810,83712,45486,67393,26935,42393,20132,55349,86057,21309,80218,10094,11357,48819,39734,40758,30432,21204,29467,30214,61024,55307,74621,11622,68908,33032,52868,99194,99900,84936,69036,99149,45013,32895,59004,32322,14933,32936,33562,72550,27385,58049,58200,16808,21360,32961,18586,79307,15492}'::text[]))"
+    ],
+    [
+        "reason.r_reason_sk,,=,,1",
+        "store_sales.ss_quantity,,>=,,1,,store_sales.ss_quantity,,<=,,20",
+        "store_sales_1.ss_quantity,,>=,,1,,store_sales_1.ss_quantity,,<=,,20",
+        "store_sales_2.ss_quantity,,>=,,1,,store_sales_2.ss_quantity,,<=,,20",
+        "store_sales_3.ss_quantity,,>=,,21,,store_sales_3.ss_quantity,,<=,,40",
+        "store_sales_4.ss_quantity,,>=,,21,,store_sales_4.ss_quantity,,<=,,40",
+        "store_sales_5.ss_quantity,,>=,,21,,store_sales_5.ss_quantity,,<=,,40",
+        "store_sales_6.ss_quantity,,>=,,41,,store_sales_6.ss_quantity,,<=,,60",
+        "store_sales_7.ss_quantity,,>=,,41,,store_sales_7.ss_quantity,,<=,,60",
+        "store_sales_8.ss_quantity,,>=,,41,,store_sales_8.ss_quantity,,<=,,60",
+        "store_sales_9.ss_quantity,,>=,,61,,store_sales_9.ss_quantity,,<=,,80",
+        "store_sales_10.ss_quantity,,>=,,61,,store_sales_10.ss_quantity,,<=,,80",
+        "store_sales_11.ss_quantity,,>=,,61,,store_sales_11.ss_quantity,,<=,,80",
+        "store_sales_12.ss_quantity,,>=,,81,,store_sales_12.ss_quantity,,<=,,100",
+        "store_sales_13.ss_quantity,,>=,,81,,store_sales_13.ss_quantity,,<=,,100",
+        "store_sales_14.ss_quantity,,>=,,81,,store_sales_14.ss_quantity,,<=,,100"
+    ],
+    [
+        "Error parsing: ((hashed SubPlan 2) OR (hashed SubPlan 4))",
+        "date_dim_1.d_moy,,>=,,4,,date_dim_1.d_moy,,<=,,7,,date_dim_1.d_year,,=,,2002",
+        "date_dim_2.d_moy,,>=,,4,,date_dim_2.d_moy,,<=,,7,,date_dim_2.d_year,,=,,2002",
+        "Error parsing: ((ca.ca_county)::text = ANY ('{\"Walker County\",\"Richland County\",\"Gaines County\",\"Douglas County\",\"Dona Ana County\"}'::text[]))",
+        "date_dim.d_moy,,>=,,4,,date_dim.d_moy,,<=,,7,,date_dim.d_year,,=,,2002"
+    ],
+    [
+        "Error parsing: (CASE WHEN (t_w_firstyear.year_total > '0'::numeric) THEN (t_w_secyear.year_total / t_w_firstyear.year_total) ELSE 0.0 END > CASE WHEN (t_s_firstyear.year_total > '0'::numeric) THEN (t_s_secyear.year_total / t_s_firstyear.year_total) ELSE 0.0 END)",
+        "t_s_firstyear.year_total,,>,,'0'::numeric,,t_s_firstyear.sale_type,,=,,'s'::text,,t_s_firstyear.dyear,,=,,2001",
+        "t_w_firstyear.year_total,,>,,'0'::numeric,,t_w_firstyear.sale_type,,=,,'w'::text,,t_w_firstyear.dyear,,=,,2001",
+        "t_s_secyear.sale_type,,=,,'s'::text,,t_s_secyear.dyear,,=,,2002",
+        "t_w_secyear.sale_type,,=,,'w'::text,,t_w_secyear.dyear,,=,,2002"
+    ],
+    [
+        "Error parsing: (item.i_category = ANY ('{Jewelry,Sports,Books}'::bpchar[]))",
+        "date_dim.d_date,,>=,,'2001-01-12'::date,,date_dim.d_date,,<=,,'2001-02-11 00:00:00'::timestamp without time zone"
+    ],
+    [
+        "Error parsing: (((customer_address.ca_state = ANY ('{CO,IL,MN}'::bpchar[])) AND (store_sales.ss_net_profit >= '100'::numeric) AND (store_sales.ss_net_profit <= '200'::numeric)) OR ((customer_address.ca_state = ANY ('{OH,MT,NM}'::bpchar[])) AND (store_sales.ss_net_profit >= '150'::numeric) AND (store_sales.ss_net_profit <= '300'::numeric)) OR ((customer_address.ca_state = ANY ('{TX,MO,MI}'::bpchar[])) AND (store_sales.ss_net_profit >= '50'::numeric) AND (store_sales.ss_net_profit <= '250'::numeric)))",
+        "Error parsing: (((customer_address.ca_country)::text = 'United States'::text) AND ((customer_address.ca_state = ANY ('{CO,IL,MN}'::bpchar[])) OR (customer_address.ca_state = ANY ('{OH,MT,NM}'::bpchar[])) OR (customer_address.ca_state = ANY ('{TX,MO,MI}'::bpchar[]))))",
+        "customer_demographics.cd_marital_status,,=,,'D'::bpchar,,customer_demographics.cd_education_status,,=,,'2 yr Degree'::bpchar,,store_sales.ss_sales_price,,>=,,100.00,,store_sales.ss_sales_price,,<=,,150.00,,household_demographics.hd_dep_count,,=,,3,,customer_demographics.cd_marital_status,,=,,'S'::bpchar,,customer_demographics.cd_education_status,,=,,'Secondary'::bpchar,,store_sales.ss_sales_price,,>=,,50.00,,store_sales.ss_sales_price,,<=,,100.00,,household_demographics.hd_dep_count,,=,,1,,customer_demographics.cd_marital_status,,=,,'W'::bpchar,,customer_demographics.cd_education_status,,=,,'Advanced Degree'::bpchar,,store_sales.ss_sales_price,,>=,,150.00,,store_sales.ss_sales_price,,<=,,200.00,,household_demographics.hd_dep_count,,=,,1",
+        "customer_demographics.cd_marital_status,,=,,'D'::bpchar,,customer_demographics.cd_education_status,,=,,'2 yr Degree'::bpchar,,customer_demographics.cd_marital_status,,=,,'S'::bpchar,,customer_demographics.cd_education_status,,=,,'Secondary'::bpchar,,customer_demographics.cd_marital_status,,=,,'W'::bpchar,,customer_demographics.cd_education_status,,=,,'Advanced Degree'::bpchar",
+        "store_sales.ss_sales_price,,>=,,100.00,,store_sales.ss_sales_price,,<=,,150.00,,store_sales.ss_sales_price,,>=,,50.00,,store_sales.ss_sales_price,,<=,,100.00,,store_sales.ss_sales_price,,>=,,150.00,,store_sales.ss_sales_price,,<=,,200.00,,store_sales.ss_net_profit,,>=,,'100'::numeric,,store_sales.ss_net_profit,,<=,,'200'::numeric,,store_sales.ss_net_profit,,>=,,'150'::numeric,,store_sales.ss_net_profit,,<=,,'300'::numeric,,store_sales.ss_net_profit,,>=,,'50'::numeric,,store_sales.ss_net_profit,,<=,,'250'::numeric",
+        "date_dim.d_year,,=,,2001",
+        "household_demographics.hd_dep_count,,=,,3,,household_demographics.hd_dep_count,,=,,1,,household_demographics.hd_dep_count,,=,,1"
+    ],
+    [
+        "d1.d_year,,>=,,1998,,d1.d_year,,<=,,2000",
+        "d2.d_year,,>=,,1998,,d2.d_year,,<=,,2000",
+        "d3.d_year,,>=,,1998,,d3.d_year,,<=,,2000",
+        "date_dim_3.d_year,,>=,,1998,,date_dim_3.d_year,,<=,,2000",
+        "date_dim_4.d_year,,>=,,1998,,date_dim_4.d_year,,<=,,2000",
+        "date_dim_5.d_year,,>=,,1998,,date_dim_5.d_year,,<=,,2000",
+        "Error parsing: (sum(((store_sales.ss_quantity)::numeric * store_sales.ss_list_price)) > $6)",
+        "date_dim.d_year,,=,,2000,,date_dim.d_moy,,=,,11",
+        "Error parsing: (sum(((catalog_sales.cs_quantity)::numeric * catalog_sales.cs_list_price)) > $7)",
+        "date_dim_1.d_year,,=,,2000,,date_dim_1.d_moy,,=,,11",
+        "Error parsing: (sum(((web_sales.ws_quantity)::numeric * web_sales.ws_list_price)) > $8)",
+        "date_dim_2.d_year,,=,,2000,,date_dim_2.d_moy,,=,,11"
+    ],
+    [
+        "Error parsing: ((substr((customer_address.ca_zip)::text, 1, 5) = ANY ('{85669,86197,88274,83405,86475,85392,85460,80348,81792}'::text[])) OR (customer_address.ca_state = ANY ('{CA,WA,GA}'::bpchar[])) OR (catalog_sales.cs_sales_price > '500'::numeric))",
+        "date_dim.d_qoy,,=,,2,,date_dim.d_year,,=,,2000"
+    ],
+    [
+        "cs1.cs_warehouse_sk,,<>,,cs2.cs_warehouse_sk",
+        "date_dim.d_date,,>=,,'1999-02-01'::date,,date_dim.d_date,,<=,,'1999-04-02 00:00:00'::timestamp without time zone",
+        "Error parsing: ((call_center.cc_county)::text = ANY ('{\"Williamson County\",\"Williamson County\",\"Williamson County\",\"Williamson County\",\"Williamson County\"}'::text[]))",
+        "customer_address.ca_state,,=,,'IL'::bpchar"
+    ],
+    [
+        "d1.d_quarter_name,,=,,'1998Q1'::bpchar",
+        "Error parsing: (d3.d_quarter_name = ANY ('{1998Q1,1998Q2,1998Q3}'::bpchar[]))",
+        "Error parsing: (d2.d_quarter_name = ANY ('{1998Q1,1998Q2,1998Q3}'::bpchar[]))"
+    ],
+    [
+        "Error parsing: (customer_address.ca_state = ANY ('{ND,WI,AL,NC,OK,MS,TN}'::bpchar[]))",
+        "Error parsing: (customer.c_birth_month = ANY ('{9,5,12,4,1,10}'::integer[]))",
+        "cd1.cd_gender,,=,,'M'::bpchar,,cd1.cd_education_status,,=,,'College'::bpchar",
+        "date_dim.d_year,,=,,2001"
+    ],
+    [
+        "Error parsing: (substr((customer_address.ca_zip)::text, 1, 5) <> substr((store.s_zip)::text, 1, 5))",
+        "date_dim.d_moy,,=,,11,,date_dim.d_year,,=,,1999",
+        "item.i_manager_id,,=,,7"
+    ],
+    [
+        "Error parsing: (item.i_category = ANY ('{Jewelry,Sports,Books}'::bpchar[]))",
+        "date_dim.d_date,,>=,,'2001-01-12'::date,,date_dim.d_date,,<=,,'2001-02-11 00:00:00'::timestamp without time zone"
+    ],
+    [
+        "Error parsing: (((CASE WHEN (sum(CASE WHEN (date_dim.d_date < '1998-04-08'::date) THEN inventory.inv_quantity_on_hand ELSE 0 END) > 0) THEN (sum(CASE WHEN (date_dim.d_date >= '1998-04-08'::date) THEN inventory.inv_quantity_on_hand ELSE 0 END) / sum(CASE WHEN (date_dim.d_date < '1998-04-08'::date) THEN inventory.inv_quantity_on_hand ELSE 0 END)) ELSE NULL::bigint END)::numeric >= 0.66666666666666666667) AND ((CASE WHEN (sum(CASE WHEN (date_dim.d_date < '1998-04-08'::date) THEN inventory.inv_quantity_on_hand ELSE 0 END) > 0) THEN (sum(CASE WHEN (date_dim.d_date >= '1998-04-08'::date) THEN inventory.inv_quantity_on_hand ELSE 0 END) / sum(CASE WHEN (date_dim.d_date < '1998-04-08'::date) THEN inventory.inv_quantity_on_hand ELSE 0 END)) ELSE NULL::bigint END)::numeric <= 1.5000000000000000))",
+        "date_dim.d_date,,>=,,'1998-03-09 00:00:00'::timestamp without time zone,,date_dim.d_date,,<=,,'1998-05-08 00:00:00'::timestamp without time zone",
+        "item.i_current_price,,>=,,0.99,,item.i_current_price,,<=,,1.49"
+    ],
+    [
+        "date_dim.d_month_seq,,>=,,1212,,date_dim.d_month_seq,,<=,,1223"
+    ],
+    [
+        "Error parsing: (count(*) > 4)",
+        "Error parsing: (date_dim_2.d_year = ANY ('{1999,2000,2001,2002}'::integer[]))",
+        "Error parsing: (sum(((store_sales_2.ss_quantity)::numeric * store_sales_2.ss_sales_price)) > (0.95000000000000000000 * $3))",
+        "Error parsing: (date_dim_3.d_year = ANY ('{1999,2000,2001,2002}'::integer[]))",
+        "date_dim.d_year,,=,,1999,,date_dim.d_moy,,=,,1",
+        "date_dim_1.d_year,,=,,1999,,date_dim_1.d_moy,,=,,1"
+    ],
+    [
+        "Error parsing: (sum(ssales.netpaid) > $2)",
+        "Error parsing: ((customer.c_birth_country)::text <> upper((customer_address.ca_country)::text))",
+        "store.s_market_id,,=,,7",
+        "ssales.i_color,,=,,'orchid'::bpchar"
+    ],
+    [
+        "d1.d_moy,,=,,4,,d1.d_year,,=,,2000",
+        "d3.d_moy,,>=,,4,,d3.d_moy,,<=,,10,,d3.d_year,,=,,2000",
+        "d2.d_moy,,>=,,4,,d2.d_moy,,<=,,10,,d2.d_year,,=,,2000"
+    ],
+    [
+        "customer_demographics.cd_gender,,=,,'F'::bpchar,,customer_demographics.cd_marital_status,,=,,'W'::bpchar,,customer_demographics.cd_education_status,,=,,'Primary'::bpchar",
+        "date_dim.d_year,,=,,1998",
+        "promotion.p_channel_email,,=,,'N'::bpchar,,promotion.p_channel_event,,=,,'N'::bpchar"
+    ],
+    [
+        "customer_demographics.cd_gender,,=,,'F'::bpchar,,customer_demographics.cd_marital_status,,=,,'W'::bpchar,,customer_demographics.cd_education_status,,=,,'Primary'::bpchar",
+        "date_dim.d_year,,=,,1998",
+        "Error parsing: (store.s_state = ANY ('{TN,TN,TN,TN,TN,TN}'::bpchar[]))"
+    ],
+    [
+        "store_sales.ss_quantity,,>=,,0,,store_sales.ss_quantity,,<=,,5,,store_sales.ss_list_price,,>=,,'11'::numeric,,store_sales.ss_list_price,,<=,,'21'::numeric,,store_sales.ss_coupon_amt,,>=,,'460'::numeric,,store_sales.ss_coupon_amt,,<=,,'1460'::numeric,,store_sales.ss_wholesale_cost,,>=,,'14'::numeric,,store_sales.ss_wholesale_cost,,<=,,'34'::numeric",
+        "store_sales_1.ss_quantity,,>=,,6,,store_sales_1.ss_quantity,,<=,,10,,store_sales_1.ss_list_price,,>=,,'91'::numeric,,store_sales_1.ss_list_price,,<=,,'101'::numeric,,store_sales_1.ss_coupon_amt,,>=,,'1430'::numeric,,store_sales_1.ss_coupon_amt,,<=,,'2430'::numeric,,store_sales_1.ss_wholesale_cost,,>=,,'32'::numeric,,store_sales_1.ss_wholesale_cost,,<=,,'52'::numeric",
+        "store_sales_2.ss_quantity,,>=,,11,,store_sales_2.ss_quantity,,<=,,15,,store_sales_2.ss_list_price,,>=,,'66'::numeric,,store_sales_2.ss_list_price,,<=,,'76'::numeric,,store_sales_2.ss_coupon_amt,,>=,,'920'::numeric,,store_sales_2.ss_coupon_amt,,<=,,'1920'::numeric,,store_sales_2.ss_wholesale_cost,,>=,,'4'::numeric,,store_sales_2.ss_wholesale_cost,,<=,,'24'::numeric",
+        "store_sales_3.ss_quantity,,>=,,16,,store_sales_3.ss_quantity,,<=,,20,,store_sales_3.ss_list_price,,>=,,'142'::numeric,,store_sales_3.ss_list_price,,<=,,'152'::numeric,,store_sales_3.ss_coupon_amt,,>=,,'3054'::numeric,,store_sales_3.ss_coupon_amt,,<=,,'4054'::numeric,,store_sales_3.ss_wholesale_cost,,>=,,'80'::numeric,,store_sales_3.ss_wholesale_cost,,<=,,'100'::numeric",
+        "store_sales_4.ss_quantity,,>=,,21,,store_sales_4.ss_quantity,,<=,,25,,store_sales_4.ss_list_price,,>=,,'135'::numeric,,store_sales_4.ss_list_price,,<=,,'145'::numeric,,store_sales_4.ss_coupon_amt,,>=,,'14180'::numeric,,store_sales_4.ss_coupon_amt,,<=,,'15180'::numeric,,store_sales_4.ss_wholesale_cost,,>=,,'38'::numeric,,store_sales_4.ss_wholesale_cost,,<=,,'58'::numeric",
+        "store_sales_5.ss_quantity,,>=,,26,,store_sales_5.ss_quantity,,<=,,30,,store_sales_5.ss_list_price,,>=,,'28'::numeric,,store_sales_5.ss_list_price,,<=,,'38'::numeric,,store_sales_5.ss_coupon_amt,,>=,,'2513'::numeric,,store_sales_5.ss_coupon_amt,,<=,,'3513'::numeric,,store_sales_5.ss_wholesale_cost,,>=,,'42'::numeric,,store_sales_5.ss_wholesale_cost,,<=,,'62'::numeric"
+    ],
+    [
+        "d1.d_moy,,=,,4,,d1.d_year,,=,,1999",
+        "Error parsing: (d3.d_year = ANY ('{1999,2000,2001}'::integer[]))",
+        "d2.d_moy,,>=,,4,,d2.d_moy,,<=,,7,,d2.d_year,,=,,1999"
+    ],
+    [
+        "date_dim.d_year,,=,,2002",
+        "customer_address.ca_state,,=,,'IL'::bpchar",
+        "Error parsing: (ctr1.ctr_total_return > (SubPlan 2))",
+        "ctr1.ctr_state,,=,,ctr2.ctr_state"
+    ],
+    [
+        "Error parsing: ((CASE WHEN (ws1.web_sales > '0'::numeric) THEN (ws2.web_sales / ws1.web_sales) ELSE NULL::numeric END > CASE WHEN (ss1.store_sales > '0'::numeric) THEN (ss2.store_sales / ss1.store_sales) ELSE NULL::numeric END) AND (CASE WHEN (ws2.web_sales > '0'::numeric) THEN (ws3.web_sales / ws2.web_sales) ELSE NULL::numeric END > CASE WHEN (ss2.store_sales > '0'::numeric) THEN (ss3.store_sales / ss2.store_sales) ELSE NULL::numeric END))",
+        "ss2.d_year,,=,,2000,,ss2.d_qoy,,=,,2",
+        "ss3.d_year,,=,,2000,,ss3.d_qoy,,=,,3",
+        "ss1.d_qoy,,=,,1,,ss1.d_year,,=,,2000",
+        "ws3.d_year,,=,,2000,,ws3.d_qoy,,=,,3",
+        "ws1.d_qoy,,=,,1,,ws1.d_year,,=,,2000",
+        "ws2.d_year,,=,,2000,,ws2.d_qoy,,=,,2"
+    ],
+    [
+        "Error parsing: (catalog_sales.cs_ext_discount_amt > (SubPlan 1))",
+        "date_dim.d_date,,>=,,'1998-03-18'::date,,date_dim.d_date,,<=,,'1998-06-16 00:00:00'::timestamp without time zone",
+        "item.i_manufact_id,,=,,269",
+        "date_dim_1.d_date,,>=,,'1998-03-18'::date,,date_dim_1.d_date,,<=,,'1998-06-16 00:00:00'::timestamp without time zone"
+    ],
+    [
+        "customer_address.ca_gmt_offset,,=,,'-5'::numeric",
+        "date_dim.d_year,,=,,1999,,date_dim.d_moy,,=,,3",
+        "item_1.i_category,,=,,'Books'::bpchar",
+        "customer_address_1.ca_gmt_offset,,=,,'-5'::numeric",
+        "date_dim_1.d_year,,=,,1999,,date_dim_1.d_moy,,=,,3",
+        "item_3.i_category,,=,,'Books'::bpchar",
+        "customer_address_2.ca_gmt_offset,,=,,'-5'::numeric",
+        "date_dim_2.d_year,,=,,1999,,date_dim_2.d_moy,,=,,3",
+        "item_5.i_category,,=,,'Books'::bpchar"
+    ],
+    [
+        "Error parsing: ((count(*) >= 15) AND (count(*) <= 20))",
+        "Error parsing: ((date_dim.d_year = ANY ('{1998,1999,2000}'::integer[])) AND (((date_dim.d_dom >= 1) AND (date_dim.d_dom <= 3)) OR ((date_dim.d_dom >= 25) AND (date_dim.d_dom <= 28))))",
+        "Error parsing: ((household_demographics.hd_vehicle_count > 0) AND ((household_demographics.hd_buy_potential = '>10000'::bpchar) OR (household_demographics.hd_buy_potential = 'Unknown'::bpchar)) AND ((CASE WHEN (household_demographics.hd_vehicle_count > 0) THEN (household_demographics.hd_dep_count / household_demographics.hd_vehicle_count) ELSE NULL::integer END)::numeric > 1.2))",
+        "Error parsing: ((store.s_county)::text = ANY ('{\"Williamson County\",\"Williamson County\",\"Williamson County\",\"Williamson County\",\"Williamson County\",\"Williamson County\",\"Williamson County\",\"Williamson County\"}'::text[]))"
+    ],
+    [
+        "Error parsing: ((hashed SubPlan 2) OR (hashed SubPlan 4))",
+        "date_dim_1.d_qoy,,<,,4,,date_dim_1.d_year,,=,,1999",
+        "date_dim_2.d_qoy,,<,,4,,date_dim_2.d_year,,=,,1999",
+        "date_dim.d_qoy,,<,,4,,date_dim.d_year,,=,,1999"
+    ],
+    [
+        "d1.d_year,,=,,2000",
+        "Error parsing: (store.s_state = ANY ('{TN,TN,TN,TN,TN,TN,TN,TN}'::bpchar[]))"
+    ],
+    [
+        "Error parsing: ((item.i_current_price >= '22'::numeric) AND (item.i_current_price <= '52'::numeric) AND (item.i_manufact_id = ANY ('{678,964,918,849}'::integer[])))",
+        "inventory.inv_quantity_on_hand,,>=,,100,,inventory.inv_quantity_on_hand,,<=,,500",
+        "date_dim.d_date,,>=,,'2001-06-02'::date,,date_dim.d_date,,<=,,'2001-08-01 00:00:00'::timestamp without time zone"
+    ],
+    [
+        "date_dim.d_month_seq,,>=,,1212,,date_dim.d_month_seq,,<=,,1223",
+        "date_dim_1.d_month_seq,,>=,,1212,,date_dim_1.d_month_seq,,<=,,1223",
+        "date_dim_2.d_month_seq,,>=,,1212,,date_dim_2.d_month_seq,,<=,,1223"
+    ],
+    [
+        "Error parsing: (CASE avg(inventory.inv_quantity_on_hand) WHEN '0'::numeric THEN '0'::numeric ELSE (stddev_samp(inventory.inv_quantity_on_hand) / avg(inventory.inv_quantity_on_hand)) END > '1'::numeric)",
+        "date_dim.d_year,,=,,1998",
+        "inv1.d_moy,,=,,4",
+        "inv2.d_moy,,=,,5"
+    ],
+    [
+        "item.i_current_price,,>=,,0.99,,item.i_current_price,,<=,,1.49",
+        "date_dim.d_date,,>=,,'1998-03-09 00:00:00'::timestamp without time zone,,date_dim.d_date,,<=,,'1998-05-08 00:00:00'::timestamp without time zone"
+    ],
+    [
+        "Error parsing: ((i1.i_manufact_id >= 742) AND (i1.i_manufact_id <= 782) AND ((SubPlan 1) > 0))",
+        "item.i_manufact,,=,,i1.i_manufact,,item.i_category,,=,,'Women'::bpchar,,item.i_color,,=,,'orchid'::bpchar,,item.i_color,,=,,'papaya'::bpchar,,item.i_units,,=,,'Pound'::bpchar,,item.i_units,,=,,'Lb'::bpchar,,item.i_size,,=,,'petite'::bpchar,,item.i_size,,=,,'medium'::bpchar,,item.i_category,,=,,'Women'::bpchar,,item.i_color,,=,,'burlywood'::bpchar,,item.i_color,,=,,'navy'::bpchar,,item.i_units,,=,,'Bundle'::bpchar,,item.i_units,,=,,'Each'::bpchar,,item.i_size,,=,,'N/A'::bpchar,,item.i_size,,=,,'extra large'::bpchar,,item.i_category,,=,,'Men'::bpchar,,item.i_color,,=,,'bisque'::bpchar,,item.i_color,,=,,'azure'::bpchar,,item.i_units,,=,,'N/A'::bpchar,,item.i_units,,=,,'Tsp'::bpchar,,item.i_size,,=,,'small'::bpchar,,item.i_size,,=,,'large'::bpchar,,item.i_category,,=,,'Men'::bpchar,,item.i_color,,=,,'chocolate'::bpchar,,item.i_color,,=,,'cornflower'::bpchar,,item.i_units,,=,,'Bunch'::bpchar,,item.i_units,,=,,'Gross'::bpchar,,item.i_size,,=,,'petite'::bpchar,,item.i_size,,=,,'medium'::bpchar,,item.i_category,,=,,'Women'::bpchar,,item.i_color,,=,,'salmon'::bpchar,,item.i_color,,=,,'midnight'::bpchar,,item.i_units,,=,,'Oz'::bpchar,,item.i_units,,=,,'Box'::bpchar,,item.i_size,,=,,'petite'::bpchar,,item.i_size,,=,,'medium'::bpchar,,item.i_category,,=,,'Women'::bpchar,,item.i_color,,=,,'snow'::bpchar,,item.i_color,,=,,'steel'::bpchar,,item.i_units,,=,,'Carton'::bpchar,,item.i_units,,=,,'Tbl'::bpchar,,item.i_size,,=,,'N/A'::bpchar,,item.i_size,,=,,'extra large'::bpchar,,item.i_category,,=,,'Men'::bpchar,,item.i_color,,=,,'purple'::bpchar,,item.i_color,,=,,'gainsboro'::bpchar,,item.i_units,,=,,'Dram'::bpchar,,item.i_units,,=,,'Unknown'::bpchar,,item.i_size,,=,,'small'::bpchar,,item.i_size,,=,,'large'::bpchar,,item.i_category,,=,,'Men'::bpchar,,item.i_color,,=,,'metallic'::bpchar,,item.i_color,,=,,'forest'::bpchar,,item.i_units,,=,,'Gram'::bpchar,,item.i_units,,=,,'Ounce'::bpchar,,item.i_size,,=,,'petite'::bpchar,,item.i_size,,=,,'medium'::bpchar"
+    ],
+    [
+        "dt.d_moy,,=,,12,,dt.d_year,,=,,1998",
+        "item.i_manager_id,,=,,1"
+    ],
+    [
+        "date_dim.d_year,,=,,1998",
+        "store.s_gmt_offset,,=,,'-5'::numeric"
+    ],
+    [
+        "v11.rnk,,<,,11",
+        "Error parsing: (avg(ss1.ss_net_profit) > (0.9 * $1))",
+        "Error parsing: ((store_sales.ss_hdemo_sk IS NULL) AND (store_sales.ss_store_sk = 2))",
+        "ss1.ss_store_sk,,=,,2",
+        "v21.rnk,,<,,11",
+        "Error parsing: (avg(ss1_1.ss_net_profit) > (0.9 * $3))",
+        "Error parsing: ((store_sales_1.ss_hdemo_sk IS NULL) AND (store_sales_1.ss_store_sk = 2))",
+        "ss1_1.ss_store_sk,,=,,2"
+    ],
+    [
+        "Error parsing: ((substr((customer_address.ca_zip)::text, 1, 5) = ANY ('{85669,86197,88274,83405,86475,85392,85460,80348,81792}'::text[])) OR (hashed SubPlan 1))",
+        "date_dim.d_qoy,,=,,2,,date_dim.d_year,,=,,2000"
+    ],
+    [
+        "(current_addr.ca_city)::text,,<>,,(dn.bought_city)::text",
+        "Error parsing: ((date_dim.d_dow = ANY ('{6,0}'::integer[])) AND (date_dim.d_year = ANY ('{1999,2000,2001}'::integer[])))",
+        "household_demographics.hd_dep_count,,=,,5,,household_demographics.hd_vehicle_count,,=,,3",
+        "Error parsing: ((store.s_city)::text = ANY ('{Midway,Fairview,Fairview,Midway,Fairview}'::text[]))"
+    ],
+    [
+        "date_dim.d_year,,=,,2000,,date_dim.d_year,,=,,1999,,date_dim.d_moy,,=,,12,,date_dim.d_year,,=,,2001,,date_dim.d_moy,,=,,1",
+        "Error parsing: ((v1.avg_monthly_sales > '0'::numeric) AND (v1.d_year = 2000) AND (CASE WHEN (v1.avg_monthly_sales > '0'::numeric) THEN (abs((v1.sum_sales - v1.avg_monthly_sales)) / v1.avg_monthly_sales) ELSE NULL::numeric END > 0.1))"
+    ],
+    [
+        "Error parsing: (((customer_address.ca_state = ANY ('{KY,GA,NM}'::bpchar[])) AND (store_sales.ss_net_profit >= '0'::numeric) AND (store_sales.ss_net_profit <= '2000'::numeric)) OR ((customer_address.ca_state = ANY ('{MT,OR,IN}'::bpchar[])) AND (store_sales.ss_net_profit >= '150'::numeric) AND (store_sales.ss_net_profit <= '3000'::numeric)) OR ((customer_address.ca_state = ANY ('{WI,MO,WV}'::bpchar[])) AND (store_sales.ss_net_profit >= '50'::numeric) AND (store_sales.ss_net_profit <= '25000'::numeric)))",
+        "Error parsing: (((customer_address.ca_country)::text = 'United States'::text) AND ((customer_address.ca_state = ANY ('{KY,GA,NM}'::bpchar[])) OR (customer_address.ca_state = ANY ('{MT,OR,IN}'::bpchar[])) OR (customer_address.ca_state = ANY ('{WI,MO,WV}'::bpchar[]))))",
+        "customer_demographics.cd_marital_status,,=,,'M'::bpchar,,customer_demographics.cd_education_status,,=,,'4 yr Degree'::bpchar,,store_sales.ss_sales_price,,>=,,100.00,,store_sales.ss_sales_price,,<=,,150.00,,customer_demographics.cd_marital_status,,=,,'D'::bpchar,,customer_demographics.cd_education_status,,=,,'Primary'::bpchar,,store_sales.ss_sales_price,,>=,,50.00,,store_sales.ss_sales_price,,<=,,100.00,,customer_demographics.cd_marital_status,,=,,'U'::bpchar,,customer_demographics.cd_education_status,,=,,'Advanced Degree'::bpchar,,store_sales.ss_sales_price,,>=,,150.00,,store_sales.ss_sales_price,,<=,,200.00",
+        "customer_demographics.cd_marital_status,,=,,'M'::bpchar,,customer_demographics.cd_education_status,,=,,'4 yr Degree'::bpchar,,customer_demographics.cd_marital_status,,=,,'D'::bpchar,,customer_demographics.cd_education_status,,=,,'Primary'::bpchar,,customer_demographics.cd_marital_status,,=,,'U'::bpchar,,customer_demographics.cd_education_status,,=,,'Advanced Degree'::bpchar",
+        "store_sales.ss_sales_price,,>=,,100.00,,store_sales.ss_sales_price,,<=,,150.00,,store_sales.ss_sales_price,,>=,,50.00,,store_sales.ss_sales_price,,<=,,100.00,,store_sales.ss_sales_price,,>=,,150.00,,store_sales.ss_sales_price,,<=,,200.00,,store_sales.ss_net_profit,,>=,,'0'::numeric,,store_sales.ss_net_profit,,<=,,'2000'::numeric,,store_sales.ss_net_profit,,>=,,'150'::numeric,,store_sales.ss_net_profit,,<=,,'3000'::numeric,,store_sales.ss_net_profit,,>=,,'50'::numeric,,store_sales.ss_net_profit,,<=,,'25000'::numeric",
+        "date_dim.d_year,,=,,1998"
+    ],
+    [
+        "web.return_rank,,<=,,10,,web.currency_rank,,<=,,10",
+        "wr.wr_return_amt,,>,,'10000'::numeric",
+        "ws.ws_net_profit,,>,,'1'::numeric,,ws.ws_net_paid,,>,,'0'::numeric,,ws.ws_quantity,,>,,0",
+        "date_dim.d_year,,=,,2000,,date_dim.d_moy,,=,,12",
+        "catalog.return_rank,,<=,,10,,catalog.currency_rank,,<=,,10",
+        "cr.cr_return_amount,,>,,'10000'::numeric",
+        "cs.cs_net_profit,,>,,'1'::numeric,,cs.cs_net_paid,,>,,'0'::numeric,,cs.cs_quantity,,>,,0",
+        "date_dim_1.d_year,,=,,2000,,date_dim_1.d_moy,,=,,12",
+        "store.return_rank,,<=,,10,,store.currency_rank,,<=,,10",
+        "sr.sr_return_amt,,>,,'10000'::numeric",
+        "sts.ss_net_profit,,>,,'1'::numeric,,sts.ss_net_paid,,>,,'0'::numeric,,sts.ss_quantity,,>,,0",
+        "date_dim_2.d_year,,=,,2000,,date_dim_2.d_moy,,=,,12"
+    ],
+    [
+        "d2.d_year,,=,,2000,,d2.d_moy,,=,,9"
+    ],
+    [
+        "y.web_cumulative,,>,,y.store_cumulative",
+        "Error parsing: (web_sales.ws_item_sk IS NOT NULL)",
+        "date_dim.d_month_seq,,>=,,1212,,date_dim.d_month_seq,,<=,,1223",
+        "Error parsing: (store_sales.ss_item_sk IS NOT NULL)",
+        "date_dim_1.d_month_seq,,>=,,1212,,date_dim_1.d_month_seq,,<=,,1223"
+    ],
+    [
+        "dt.d_moy,,=,,12,,dt.d_year,,=,,1998",
+        "item.i_manager_id,,=,,1"
+    ],
+    [
+        "Error parsing: (CASE WHEN (tmp1.avg_quarterly_sales > '0'::numeric) THEN (abs((tmp1.sum_sales - tmp1.avg_quarterly_sales)) / tmp1.avg_quarterly_sales) ELSE NULL::numeric END > 0.1)",
+        "Error parsing: (((item.i_category = ANY ('{Books,Children,Electronics}'::bpchar[])) AND (item.i_class = ANY ('{personal,portable,reference,self-help}'::bpchar[])) AND (item.i_brand = ANY ('{\"scholaramalgamalg #14\",\"scholaramalgamalg #7\",\"exportiunivamalg #9\",\"scholaramalgamalg #9\"}'::bpchar[]))) OR ((item.i_category = ANY ('{Women,Music,Men}'::bpchar[])) AND (item.i_class = ANY ('{accessories,classical,fragrances,pants}'::bpchar[])) AND (item.i_brand = ANY ('{\"amalgimporto #1\",\"edu packscholar #1\",\"exportiimporto #1\",\"importoamalg #1\"}'::bpchar[]))))",
+        "Error parsing: (date_dim.d_month_seq = ANY ('{1212,1213,1214,1215,1216,1217,1218,1219,1220,1221,1222,1223}'::integer[]))"
+    ],
+    [
+        "date_dim_2.d_year,,=,,1999,,date_dim_2.d_moy,,=,,3",
+        "date_dim_3.d_year,,=,,1999,,date_dim_3.d_moy,,=,,3",
+        "date_dim.d_month_seq,,>=,,$0,,date_dim.d_month_seq,,<=,,$1",
+        "date_dim_1.d_moy,,=,,3,,date_dim_1.d_year,,=,,1999",
+        "item.i_category,,=,,'Jewelry'::bpchar,,item.i_class,,=,,'consignment'::bpchar"
+    ],
+    [
+        "date_dim.d_moy,,=,,12,,date_dim.d_year,,=,,2001",
+        "item.i_manager_id,,=,,36"
+    ],
+    [
+        "customer_address.ca_gmt_offset,,=,,'-8'::numeric",
+        "date_dim.d_year,,=,,2000,,date_dim.d_moy,,=,,1",
+        "Error parsing: (item_1.i_color = ANY ('{orchid,chiffon,lace}'::bpchar[]))",
+        "customer_address_1.ca_gmt_offset,,=,,'-8'::numeric",
+        "date_dim_1.d_year,,=,,2000,,date_dim_1.d_moy,,=,,1",
+        "Error parsing: (item_3.i_color = ANY ('{orchid,chiffon,lace}'::bpchar[]))",
+        "customer_address_2.ca_gmt_offset,,=,,'-8'::numeric",
+        "date_dim_2.d_year,,=,,2000,,date_dim_2.d_moy,,=,,1",
+        "Error parsing: (item_5.i_color = ANY ('{orchid,chiffon,lace}'::bpchar[]))"
+    ],
+    [
+        "date_dim.d_year,,=,,2000,,date_dim.d_year,,=,,1999,,date_dim.d_moy,,=,,12,,date_dim.d_year,,=,,2001,,date_dim.d_moy,,=,,1",
+        "Error parsing: ((v1.avg_monthly_sales > '0'::numeric) AND (v1.d_year = 2000) AND (CASE WHEN (v1.avg_monthly_sales > '0'::numeric) THEN (abs((v1.sum_sales - v1.avg_monthly_sales)) / v1.avg_monthly_sales) ELSE NULL::numeric END > 0.1))"
+    ],
+    [
+        "Error parsing: (((sum(store_sales.ss_ext_sales_price)) >= (0.9 * (sum(catalog_sales.cs_ext_sales_price)))) AND ((sum(store_sales.ss_ext_sales_price)) <= (1.1 * (sum(catalog_sales.cs_ext_sales_price)))) AND ((sum(catalog_sales.cs_ext_sales_price)) >= (0.9 * (sum(store_sales.ss_ext_sales_price)))) AND ((sum(catalog_sales.cs_ext_sales_price)) <= (1.1 * (sum(store_sales.ss_ext_sales_price)))) AND ((sum(store_sales.ss_ext_sales_price)) >= (0.9 * (sum(web_sales.ws_ext_sales_price)))) AND ((sum(store_sales.ss_ext_sales_price)) <= (1.1 * (sum(web_sales.ws_ext_sales_price)))) AND ((sum(web_sales.ws_ext_sales_price)) >= (0.9 * (sum(store_sales.ss_ext_sales_price)))) AND ((sum(web_sales.ws_ext_sales_price)) <= (1.1 * (sum(store_sales.ss_ext_sales_price)))))",
+        "date_dim_6.d_date,,=,,'1998-02-19'::date",
+        "date_dim_1.d_week_seq,,=,,$0",
+        "Error parsing: (((sum(catalog_sales.cs_ext_sales_price)) >= (0.9 * (sum(web_sales.ws_ext_sales_price)))) AND ((sum(catalog_sales.cs_ext_sales_price)) <= (1.1 * (sum(web_sales.ws_ext_sales_price)))) AND ((sum(web_sales.ws_ext_sales_price)) >= (0.9 * (sum(catalog_sales.cs_ext_sales_price)))) AND ((sum(web_sales.ws_ext_sales_price)) <= (1.1 * (sum(catalog_sales.cs_ext_sales_price)))))",
+        "date_dim_7.d_date,,=,,'1998-02-19'::date",
+        "date_dim_3.d_week_seq,,=,,$1",
+        "date_dim_8.d_date,,=,,'1998-02-19'::date",
+        "date_dim_5.d_week_seq,,=,,$2"
+    ],
+    [
+        "d_1.d_month_seq,,>=,,1197,,d_1.d_month_seq,,<=,,1208",
+        "d.d_month_seq,,>=,,1185,,d.d_month_seq,,<=,,1196"
+    ],
+    [
+        "customer_address.ca_gmt_offset,,=,,'-6'::numeric",
+        "date_dim.d_year,,=,,1999,,date_dim.d_moy,,=,,9",
+        "item_1.i_category,,=,,'Children'::bpchar",
+        "customer_address_1.ca_gmt_offset,,=,,'-6'::numeric",
+        "date_dim_1.d_year,,=,,1999,,date_dim_1.d_moy,,=,,9",
+        "item_3.i_category,,=,,'Children'::bpchar",
+        "customer_address_2.ca_gmt_offset,,=,,'-6'::numeric",
+        "date_dim_2.d_year,,=,,1999,,date_dim_2.d_moy,,=,,9",
+        "item_5.i_category,,=,,'Children'::bpchar"
+    ],
+    [
+        "customer_address.ca_gmt_offset,,=,,'-7'::numeric",
+        "item.i_category,,=,,'Books'::bpchar",
+        "date_dim.d_year,,=,,1999,,date_dim.d_moy,,=,,11",
+        "store.s_gmt_offset,,=,,'-7'::numeric",
+        "promotion.p_channel_dmail,,=,,'Y'::bpchar,,promotion.p_channel_email,,=,,'Y'::bpchar,,promotion.p_channel_tv,,=,,'Y'::bpchar",
+        "item_1.i_category,,=,,'Books'::bpchar",
+        "customer_address_1.ca_gmt_offset,,=,,'-7'::numeric",
+        "date_dim_1.d_year,,=,,1999,,date_dim_1.d_moy,,=,,11",
+        "store_1.s_gmt_offset,,=,,'-7'::numeric"
+    ],
+    [
+        "date_dim.d_month_seq,,>=,,1212,,date_dim.d_month_seq,,<=,,1223"
+    ],
+    [
+        "Error parsing: (CASE WHEN (tmp1.avg_monthly_sales > '0'::numeric) THEN (abs((tmp1.sum_sales - tmp1.avg_monthly_sales)) / tmp1.avg_monthly_sales) ELSE NULL::numeric END > 0.1)",
+        "Error parsing: (((item.i_category = ANY ('{Books,Children,Electronics}'::bpchar[])) AND (item.i_class = ANY ('{personal,portable,reference,self-help}'::bpchar[])) AND (item.i_brand = ANY ('{\"scholaramalgamalg #14\",\"scholaramalgamalg #7\",\"exportiunivamalg #9\",\"scholaramalgamalg #9\"}'::bpchar[]))) OR ((item.i_category = ANY ('{Women,Music,Men}'::bpchar[])) AND (item.i_class = ANY ('{accessories,classical,fragrances,pants}'::bpchar[])) AND (item.i_brand = ANY ('{\"amalgimporto #1\",\"edu packscholar #1\",\"exportiimporto #1\",\"importoamalg #1\"}'::bpchar[]))))",
+        "Error parsing: (date_dim.d_month_seq = ANY ('{1212,1213,1214,1215,1216,1217,1218,1219,1220,1221,1222,1223}'::integer[]))"
+    ],
+    [
+        "cd1.cd_marital_status,,<>,,cd2.cd_marital_status",
+        "Error parsing: ((item.i_current_price >= '35'::numeric) AND (item.i_current_price <= '45'::numeric) AND (item.i_current_price >= '36'::numeric) AND (item.i_current_price <= '50'::numeric) AND (item.i_color = ANY ('{maroon,burnished,dim,steel,navajo,chocolate}'::bpchar[])))",
+        "Error parsing: (sum(catalog_sales.cs_ext_list_price) > ('2'::numeric * sum(((catalog_returns.cr_refunded_cash + catalog_returns.cr_reversed_charge) + catalog_returns.cr_store_credit))))",
+        "cs2.cnt,,<=,,cs1.cnt",
+        "cs1.syear,,=,,2000",
+        "cs2.syear,,=,,2001"
+    ],
+    [
+        "Error parsing: ((sum(store_sales.ss_sales_price)) <= (0.1 * (avg((sum(store_sales_1.ss_sales_price))))))",
+        "date_dim.d_month_seq,,>=,,1212,,date_dim.d_month_seq,,<=,,1223",
+        "date_dim_1.d_month_seq,,>=,,1212,,date_dim_1.d_month_seq,,<=,,1223"
+    ],
+    [
+        "time_dim.t_time,,>=,,49530,,time_dim.t_time,,<=,,78330",
+        "date_dim.d_year,,=,,2002",
+        "Error parsing: (ship_mode.sm_carrier = ANY ('{DIAMOND,AIRBORNE}'::bpchar[]))",
+        "time_dim_1.t_time,,>=,,49530,,time_dim_1.t_time,,<=,,78330",
+        "date_dim_1.d_year,,=,,2002",
+        "Error parsing: (ship_mode_1.sm_carrier = ANY ('{DIAMOND,AIRBORNE}'::bpchar[]))"
+    ],
+    [
+        "dw2.rk,,<=,,100",
+        "date_dim.d_month_seq,,>=,,1212,,date_dim.d_month_seq,,<=,,1223"
+    ],
+    [
+        "(current_addr.ca_city)::text,,<>,,(dn.bought_city)::text",
+        "Error parsing: ((date_dim.d_dom >= 1) AND (date_dim.d_dom <= 2) AND (date_dim.d_year = ANY ('{1999,2000,2001}'::integer[])))",
+        "household_demographics.hd_dep_count,,=,,5,,household_demographics.hd_vehicle_count,,=,,3",
+        "Error parsing: ((store.s_city)::text = ANY ('{Midway,Fairview}'::text[]))"
+    ],
+    [
+        "Error parsing: (ca.ca_state = ANY ('{CO,IL,MN}'::bpchar[]))",
+        "date_dim.d_moy,,>=,,1,,date_dim.d_moy,,<=,,3,,date_dim.d_year,,=,,1999",
+        "date_dim_1.d_moy,,>=,,1,,date_dim_1.d_moy,,<=,,3,,date_dim_1.d_year,,=,,1999",
+        "date_dim_2.d_moy,,>=,,1,,date_dim_2.d_moy,,<=,,3,,date_dim_2.d_year,,=,,1999"
+    ],
+    [
+        "d1.d_month_seq,,>=,,1212,,d1.d_month_seq,,<=,,1223",
+        "tmp1.ranking,,<=,,5",
+        "date_dim.d_month_seq,,>=,,1212,,date_dim.d_month_seq,,<=,,1223"
+    ],
+    [
+        "time_dim.t_meal_time,,=,,'breakfast'::bpchar,,time_dim.t_meal_time,,=,,'dinner'::bpchar",
+        "date_dim.d_moy,,=,,12,,date_dim.d_year,,=,,2000",
+        "date_dim_1.d_moy,,=,,12,,date_dim_1.d_year,,=,,2000",
+        "date_dim_2.d_moy,,=,,12,,date_dim_2.d_year,,=,,2000",
+        "item.i_manager_id,,=,,1"
+    ],
+    [
+        "Error parsing: (d3.d_date > (d1.d_date + 5))",
+        "inventory.inv_quantity_on_hand,,<,,catalog_sales.cs_quantity",
+        "customer_demographics.cd_marital_status,,=,,'M'::bpchar",
+        "d1.d_year,,=,,2001",
+        "household_demographics.hd_buy_potential,,=,,'1001-5000'::bpchar"
+    ],
+    [
+        "Error parsing: ((count(*) >= 1) AND (count(*) <= 5))",
+        "Error parsing: ((date_dim.d_dom >= 1) AND (date_dim.d_dom <= 2) AND (date_dim.d_year = ANY ('{1998,1999,2000}'::integer[])))",
+        "Error parsing: ((household_demographics.hd_vehicle_count > 0) AND ((household_demographics.hd_buy_potential = '>10000'::bpchar) OR (household_demographics.hd_buy_potential = 'Unknown'::bpchar)) AND (CASE WHEN (household_demographics.hd_vehicle_count > 0) THEN (household_demographics.hd_dep_count / household_demographics.hd_vehicle_count) ELSE NULL::integer END > 1))",
+        "Error parsing: ((store.s_county)::text = ANY ('{\"Williamson County\",\"Williamson County\",\"Williamson County\",\"Williamson County\"}'::text[]))"
+    ],
+    [
+        "Error parsing: (date_dim.d_year = ANY ('{2001,2002}'::integer[]))",
+        "Error parsing: (date_dim_1.d_year = ANY ('{2001,2002}'::integer[]))",
+        "Error parsing: (CASE WHEN (t_w_firstyear.year_total > '0'::numeric) THEN (t_w_secyear.year_total / t_w_firstyear.year_total) ELSE NULL::numeric END > CASE WHEN (t_s_firstyear.year_total > '0'::numeric) THEN (t_s_secyear.year_total / t_s_firstyear.year_total) ELSE NULL::numeric END)",
+        "t_s_firstyear.year_total,,>,,'0'::numeric,,t_s_firstyear.sale_type,,=,,'s'::text,,t_s_firstyear.year,,=,,2001",
+        "t_s_secyear.sale_type,,=,,'s'::text,,t_s_secyear.year,,=,,2002",
+        "t_w_firstyear.year_total,,>,,'0'::numeric,,t_w_firstyear.sale_type,,=,,'w'::text,,t_w_firstyear.year,,=,,2001",
+        "t_w_secyear.sale_type,,=,,'w'::text,,t_w_secyear.year,,=,,2002"
+    ],
+    [
+        "item.i_category,,=,,'Sports'::bpchar",
+        "item_1.i_category,,=,,'Sports'::bpchar",
+        "item_2.i_category,,=,,'Sports'::bpchar",
+        "Error parsing: (((curr_yr.sales_cnt)::numeric(17,2) / (prev_yr.sales_cnt)::numeric(17,2)) < 0.9)",
+        "curr_yr.d_year,,=,,2002",
+        "prev_yr.d_year,,=,,2001"
+    ],
+    [
+        "Error parsing: (store_sales.ss_addr_sk IS NULL)",
+        "Error parsing: (catalog_sales.cs_warehouse_sk IS NULL)",
+        "Error parsing: (web_sales.ws_web_page_sk IS NULL)"
+    ],
+    [
+        "date_dim.d_date,,>=,,'1998-08-04'::date,,date_dim.d_date,,<=,,'1998-09-03 00:00:00'::timestamp without time zone",
+        "date_dim_1.d_date,,>=,,'1998-08-04'::date,,date_dim_1.d_date,,<=,,'1998-09-03 00:00:00'::timestamp without time zone",
+        "date_dim_2.d_date,,>=,,'1998-08-04'::date,,date_dim_2.d_date,,<=,,'1998-09-03 00:00:00'::timestamp without time zone",
+        "date_dim_3.d_date,,>=,,'1998-08-04'::date,,date_dim_3.d_date,,<=,,'1998-09-03 00:00:00'::timestamp without time zone",
+        "date_dim_4.d_date,,>=,,'1998-08-04'::date,,date_dim_4.d_date,,<=,,'1998-09-03 00:00:00'::timestamp without time zone",
+        "date_dim_5.d_date,,>=,,'1998-08-04'::date,,date_dim_5.d_date,,<=,,'1998-09-03 00:00:00'::timestamp without time zone"
+    ],
+    [
+        "date_dim_2.d_year,,=,,date_dim.d_year",
+        "Error parsing: ((COALESCE((sum(web_sales.ws_quantity)), '0'::bigint) > 0) OR (COALESCE((sum(catalog_sales.cs_quantity)), '0'::bigint) > 0))",
+        "date_dim_1.d_year,,=,,date_dim.d_year",
+        "date_dim.d_year,,=,,2000",
+        "date_dim_1.d_year,,=,,2000",
+        "date_dim_2.d_year,,=,,2000"
+    ],
+    [
+        "Error parsing: ((date_dim.d_dow = 1) AND (date_dim.d_year = ANY ('{1998,1999,2000}'::integer[])))",
+        "store.s_number_employees,,>=,,200,,store.s_number_employees,,<=,,295",
+        "household_demographics.hd_dep_count,,=,,8,,household_demographics.hd_vehicle_count,,>,,0"
+    ],
+    [
+        "date_dim.d_date,,>=,,'1998-08-04'::date,,date_dim.d_date,,<=,,'1998-09-03 00:00:00'::timestamp without time zone",
+        "promotion.p_channel_tv,,=,,'N'::bpchar",
+        "item.i_current_price,,>,,'50'::numeric",
+        "item_1.i_current_price,,>,,'50'::numeric",
+        "date_dim_1.d_date,,>=,,'1998-08-04'::date,,date_dim_1.d_date,,<=,,'1998-09-03 00:00:00'::timestamp without time zone",
+        "promotion_1.p_channel_tv,,=,,'N'::bpchar",
+        "item_2.i_current_price,,>,,'50'::numeric",
+        "date_dim_2.d_date,,>=,,'1998-08-04'::date,,date_dim_2.d_date,,<=,,'1998-09-03 00:00:00'::timestamp without time zone",
+        "promotion_2.p_channel_tv,,=,,'N'::bpchar"
+    ],
+    [
+        "date_dim.d_year,,=,,1998",
+        "Error parsing: (ctr1.ctr_total_return > (SubPlan 2))",
+        "ctr1.ctr_state,,=,,ctr2.ctr_state",
+        "customer_address.ca_state,,=,,'IL'::bpchar"
+    ],
+    [
+        "Error parsing: ((item.i_current_price >= '30'::numeric) AND (item.i_current_price <= '60'::numeric) AND (item.i_manufact_id = ANY ('{437,129,727,663}'::integer[])))",
+        "inventory.inv_quantity_on_hand,,>=,,100,,inventory.inv_quantity_on_hand,,<=,,500",
+        "date_dim.d_date,,>=,,'2002-05-30'::date,,date_dim.d_date,,<=,,'2002-07-29 00:00:00'::timestamp without time zone"
+    ],
+    [
+        "Error parsing: (date_dim_2.d_date = ANY ('{1998-01-02,1998-10-15,1998-11-10}'::date[]))",
+        "Error parsing: (date_dim_5.d_date = ANY ('{1998-01-02,1998-10-15,1998-11-10}'::date[]))",
+        "Error parsing: (date_dim_8.d_date = ANY ('{1998-01-02,1998-10-15,1998-11-10}'::date[]))"
+    ],
+    [
+        "(customer_address.ca_city)::text,,=,,'Hopewell'::text",
+        "income_band.ib_lower_bound,,>=,,32287,,income_band.ib_upper_bound,,<=,,82287"
+    ],
+    [
+        "cd1.cd_marital_status,,=,,'M'::bpchar,,cd1.cd_education_status,,=,,'4 yr Degree'::bpchar,,web_sales.ws_sales_price,,>=,,100.00,,web_sales.ws_sales_price,,<=,,150.00,,cd1.cd_marital_status,,=,,'D'::bpchar,,cd1.cd_education_status,,=,,'Primary'::bpchar,,web_sales.ws_sales_price,,>=,,50.00,,web_sales.ws_sales_price,,<=,,100.00,,cd1.cd_marital_status,,=,,'U'::bpchar,,cd1.cd_education_status,,=,,'Advanced Degree'::bpchar,,web_sales.ws_sales_price,,>=,,150.00,,web_sales.ws_sales_price,,<=,,200.00",
+        "cd1.cd_marital_status,,=,,'M'::bpchar,,cd1.cd_education_status,,=,,'4 yr Degree'::bpchar,,cd1.cd_marital_status,,=,,'D'::bpchar,,cd1.cd_education_status,,=,,'Primary'::bpchar,,cd1.cd_marital_status,,=,,'U'::bpchar,,cd1.cd_education_status,,=,,'Advanced Degree'::bpchar",
+        "Error parsing: (((customer_address.ca_state = ANY ('{KY,GA,NM}'::bpchar[])) AND (web_sales.ws_net_profit >= '100'::numeric) AND (web_sales.ws_net_profit <= '200'::numeric)) OR ((customer_address.ca_state = ANY ('{MT,OR,IN}'::bpchar[])) AND (web_sales.ws_net_profit >= '150'::numeric) AND (web_sales.ws_net_profit <= '300'::numeric)) OR ((customer_address.ca_state = ANY ('{WI,MO,WV}'::bpchar[])) AND (web_sales.ws_net_profit >= '50'::numeric) AND (web_sales.ws_net_profit <= '250'::numeric)))",
+        "Error parsing: (((customer_address.ca_country)::text = 'United States'::text) AND ((customer_address.ca_state = ANY ('{KY,GA,NM}'::bpchar[])) OR (customer_address.ca_state = ANY ('{MT,OR,IN}'::bpchar[])) OR (customer_address.ca_state = ANY ('{WI,MO,WV}'::bpchar[]))))",
+        "web_sales.ws_sales_price,,>=,,100.00,,web_sales.ws_sales_price,,<=,,150.00,,web_sales.ws_sales_price,,>=,,50.00,,web_sales.ws_sales_price,,<=,,100.00,,web_sales.ws_sales_price,,>=,,150.00,,web_sales.ws_sales_price,,<=,,200.00,,web_sales.ws_net_profit,,>=,,'100'::numeric,,web_sales.ws_net_profit,,<=,,'200'::numeric,,web_sales.ws_net_profit,,>=,,'150'::numeric,,web_sales.ws_net_profit,,<=,,'300'::numeric,,web_sales.ws_net_profit,,>=,,'50'::numeric,,web_sales.ws_net_profit,,<=,,'250'::numeric",
+        "date_dim.d_year,,=,,1998"
+    ],
+    [
+        "d1.d_month_seq,,>=,,1212,,d1.d_month_seq,,<=,,1223"
+    ],
+    [
+        "date_dim.d_month_seq,,>=,,1212,,date_dim.d_month_seq,,<=,,1223",
+        "date_dim_1.d_month_seq,,>=,,1212,,date_dim_1.d_month_seq,,<=,,1223",
+        "date_dim_2.d_month_seq,,>=,,1212,,date_dim_2.d_month_seq,,<=,,1223"
+    ],
+    [
+        "time_dim.t_minute,,>=,,30,,time_dim.t_hour,,=,,8",
+        "household_demographics.hd_dep_count,,=,,3,,household_demographics.hd_vehicle_count,,<=,,5,,household_demographics.hd_dep_count,,=,,0,,household_demographics.hd_vehicle_count,,<=,,2,,household_demographics.hd_dep_count,,=,,1,,household_demographics.hd_vehicle_count,,<=,,3",
+        "(store.s_store_name)::text,,=,,'ese'::text",
+        "time_dim_1.t_minute,,<,,30,,time_dim_1.t_hour,,=,,9",
+        "household_demographics_1.hd_dep_count,,=,,3,,household_demographics_1.hd_vehicle_count,,<=,,5,,household_demographics_1.hd_dep_count,,=,,0,,household_demographics_1.hd_vehicle_count,,<=,,2,,household_demographics_1.hd_dep_count,,=,,1,,household_demographics_1.hd_vehicle_count,,<=,,3",
+        "(store_1.s_store_name)::text,,=,,'ese'::text",
+        "time_dim_2.t_minute,,>=,,30,,time_dim_2.t_hour,,=,,9",
+        "household_demographics_2.hd_dep_count,,=,,3,,household_demographics_2.hd_vehicle_count,,<=,,5,,household_demographics_2.hd_dep_count,,=,,0,,household_demographics_2.hd_vehicle_count,,<=,,2,,household_demographics_2.hd_dep_count,,=,,1,,household_demographics_2.hd_vehicle_count,,<=,,3",
+        "(store_2.s_store_name)::text,,=,,'ese'::text",
+        "time_dim_3.t_minute,,<,,30,,time_dim_3.t_hour,,=,,10",
+        "household_demographics_3.hd_dep_count,,=,,3,,household_demographics_3.hd_vehicle_count,,<=,,5,,household_demographics_3.hd_dep_count,,=,,0,,household_demographics_3.hd_vehicle_count,,<=,,2,,household_demographics_3.hd_dep_count,,=,,1,,household_demographics_3.hd_vehicle_count,,<=,,3",
+        "(store_3.s_store_name)::text,,=,,'ese'::text",
+        "time_dim_4.t_minute,,>=,,30,,time_dim_4.t_hour,,=,,10",
+        "household_demographics_4.hd_dep_count,,=,,3,,household_demographics_4.hd_vehicle_count,,<=,,5,,household_demographics_4.hd_dep_count,,=,,0,,household_demographics_4.hd_vehicle_count,,<=,,2,,household_demographics_4.hd_dep_count,,=,,1,,household_demographics_4.hd_vehicle_count,,<=,,3",
+        "(store_4.s_store_name)::text,,=,,'ese'::text",
+        "time_dim_5.t_minute,,<,,30,,time_dim_5.t_hour,,=,,11",
+        "household_demographics_5.hd_dep_count,,=,,3,,household_demographics_5.hd_vehicle_count,,<=,,5,,household_demographics_5.hd_dep_count,,=,,0,,household_demographics_5.hd_vehicle_count,,<=,,2,,household_demographics_5.hd_dep_count,,=,,1,,household_demographics_5.hd_vehicle_count,,<=,,3",
+        "(store_5.s_store_name)::text,,=,,'ese'::text",
+        "time_dim_6.t_minute,,>=,,30,,time_dim_6.t_hour,,=,,11",
+        "household_demographics_6.hd_dep_count,,=,,3,,household_demographics_6.hd_vehicle_count,,<=,,5,,household_demographics_6.hd_dep_count,,=,,0,,household_demographics_6.hd_vehicle_count,,<=,,2,,household_demographics_6.hd_dep_count,,=,,1,,household_demographics_6.hd_vehicle_count,,<=,,3",
+        "(store_6.s_store_name)::text,,=,,'ese'::text",
+        "time_dim_7.t_minute,,<,,30,,time_dim_7.t_hour,,=,,12",
+        "household_demographics_7.hd_dep_count,,=,,3,,household_demographics_7.hd_vehicle_count,,<=,,5,,household_demographics_7.hd_dep_count,,=,,0,,household_demographics_7.hd_vehicle_count,,<=,,2,,household_demographics_7.hd_dep_count,,=,,1,,household_demographics_7.hd_vehicle_count,,<=,,3",
+        "(store_7.s_store_name)::text,,=,,'ese'::text"
+    ],
+    [
+        "Error parsing: (CASE WHEN (tmp1.avg_monthly_sales <> '0'::numeric) THEN (abs((tmp1.sum_sales - tmp1.avg_monthly_sales)) / tmp1.avg_monthly_sales) ELSE NULL::numeric END > 0.1)",
+        "date_dim.d_year,,=,,2000",
+        "Error parsing: (((item.i_category = ANY ('{Home,Books,Electronics}'::bpchar[])) AND (item.i_class = ANY ('{wallpaper,parenting,musical}'::bpchar[]))) OR ((item.i_category = ANY ('{Shoes,Jewelry,Men}'::bpchar[])) AND (item.i_class = ANY ('{womens,birdal,pants}'::bpchar[]))))"
+    ],
+    [
+        "time_dim.t_hour,,>=,,6,,time_dim.t_hour,,<=,,7",
+        "web_page.wp_char_count,,>=,,5000,,web_page.wp_char_count,,<=,,5200",
+        "household_demographics.hd_dep_count,,=,,8",
+        "time_dim_1.t_hour,,>=,,14,,time_dim_1.t_hour,,<=,,15",
+        "web_page_1.wp_char_count,,>=,,5000,,web_page_1.wp_char_count,,<=,,5200",
+        "household_demographics_1.hd_dep_count,,=,,8"
+    ],
+    [
+        "customer_demographics.cd_marital_status,,=,,'M'::bpchar,,customer_demographics.cd_education_status,,=,,'Unknown'::bpchar,,customer_demographics.cd_marital_status,,=,,'W'::bpchar,,customer_demographics.cd_education_status,,=,,'Advanced Degree'::bpchar",
+        "customer_address.ca_gmt_offset,,=,,'-7'::numeric",
+        "household_demographics.hd_buy_potential,,~~,,'0-500%'::text",
+        "date_dim.d_year,,=,,1999,,date_dim.d_moy,,=,,11"
+    ],
+    [
+        "Error parsing: (web_sales.ws_ext_discount_amt > (SubPlan 1))",
+        "date_dim.d_date,,>=,,'1998-03-18'::date,,date_dim.d_date,,<=,,'1998-06-16 00:00:00'::timestamp without time zone",
+        "item.i_manufact_id,,=,,269",
+        "date_dim_1.d_date,,>=,,'1998-03-18'::date,,date_dim_1.d_date,,<=,,'1998-06-16 00:00:00'::timestamp without time zone"
+    ],
+    [
+        "reason.r_reason_desc,,=,,'Did not like the warranty'::bpchar"
+    ],
+    [
+        "ws1.ws_warehouse_sk,,<>,,ws2.ws_warehouse_sk",
+        "date_dim.d_date,,>=,,'1999-05-01'::date,,date_dim.d_date,,<=,,'1999-06-30 00:00:00'::timestamp without time zone",
+        "web_site.web_company_name,,=,,'pri'::bpchar",
+        "customer_address.ca_state,,=,,'TX'::bpchar"
+    ],
+    [
+        "ws1_1.ws_warehouse_sk,,<>,,ws2.ws_warehouse_sk",
+        "date_dim.d_date,,>=,,'1999-05-01'::date,,date_dim.d_date,,<=,,'1999-06-30 00:00:00'::timestamp without time zone",
+        "customer_address.ca_state,,=,,'TX'::bpchar",
+        "web_site.web_company_name,,=,,'pri'::bpchar"
+    ],
+    [
+        "time_dim.t_minute,,>=,,30,,time_dim.t_hour,,=,,8",
+        "household_demographics.hd_dep_count,,=,,5",
+        "(store.s_store_name)::text,,=,,'ese'::text"
+    ],
+    [
+        "date_dim.d_month_seq,,>=,,1212,,date_dim.d_month_seq,,<=,,1223",
+        "date_dim_1.d_month_seq,,>=,,1212,,date_dim_1.d_month_seq,,<=,,1223"
+    ],
+    [
+        "Error parsing: (item.i_category = ANY ('{Jewelry,Sports,Books}'::bpchar[]))",
+        "date_dim.d_date,,>=,,'2001-01-12'::date,,date_dim.d_date,,<=,,'2001-02-11 00:00:00'::timestamp without time zone"
+    ],
+    [
+        "date_dim.d_month_seq,,>=,,1212,,date_dim.d_month_seq,,<=,,1223"
+    ]
+]
